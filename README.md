@@ -33,7 +33,7 @@ Note: This works considering you have downloaded the weights file at the yolov3-
 
 
 ### References
-- <a href="https://docs.google.com/document/d/1Zy8wdP_IZVClmJ4RQ8geuRMGNmiNQdbUKYD_cXuroik/edit">CUDA Installation procedure</a>
+- <a href="https://docs.google.com/document/d/1Zy8wdP_IZVClmJ4RQ8geuRMGNmiNQdbUKYD_cXuroik/edit" target="_blank">CUDA Installation procedure</a>
 - <a href="https://docs.google.com/document/d/1cS2fPa2mSn4a64bqt6ewOZj7CbpALXwBtqBfHCxVn1c">Python Documentation</a>
 - <a href="http://gazebosim.org/tutorials">Gazebo Tutorials</a>
 - <a href="http://wiki.ros.org/">ROS Tutorials</a>
