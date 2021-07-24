@@ -15,6 +15,7 @@ The idea of the project was to make a Human-following bot based on Computer Visi
 <div style="text-align:center"><img src="images%20and%20videos/openCV%20demo.jpg" width=600px/>
 </div>
 <h4>Detection of the custom accessory using OpenCV</h4>
+<a href="https://pysource.com/2020/04/02/train-yolo-to-detect-a-custom-object-online-with-free-gpu/">Tutorial link</a>
 <hr></hr>
 
 <h3><a href="https://docs.google.com/document/d/1_7Y8IBTUtFv1acjY5ltlLoZ3GvdO9JTSVAz3Jc5b-h8">Final documentation link</a><h3>
