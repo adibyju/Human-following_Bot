@@ -16,3 +16,28 @@ The idea of the project was to make a Human-following bot based on Computer Visi
 </div>
 <h4>Detection of the custom accessory using OpenCV</h4>
 <hr></hr>
+
+<h3><a href="https://docs.google.com/document/d/1_7Y8IBTUtFv1acjY5ltlLoZ3GvdO9JTSVAz3Jc5b-h8">Final documentation link</a><h3>
+
+### Skills Learnt
+- Fundamentals of Python
+- Version control using Git and managing repositories on Github
+- Installation of Ubuntu and various useful Linux terminal commands
+- Robot control using ROS and simulation in Gazebo
+- Creating a robot model in Solidworks
+- Darknet architecture and YOLO implementation
+- Basics of image processing and Machine Learning while working with OpenCV and YOLO
+- To train a custom dataset for detection
+- The ability to work in a team and manage time efficiently
+
+### References
+- <a href="https://docs.google.com/document/d/1Zy8wdP_IZVClmJ4RQ8geuRMGNmiNQdbUKYD_cXuroik/edit">CUDA Installation procedure</a>
+- <a href="https://docs.google.com/document/d/1cS2fPa2mSn4a64bqt6ewOZj7CbpALXwBtqBfHCxVn1c">Python Documentation</a>
+- <a href="http://gazebosim.org/tutorials">Gazebo Tutorials</a>
+- <a href="http://wiki.ros.org/">ROS Tutorials</a>
+- <a href="https://github.com/erciitb/ROS-Tutorial">ROS Tutorials by ERC-IITB</a>
+- <a href="https://github.com/iArunava/YOLOv3-Object-Detection-with-OpenCV">YOLOv3</a>
+- <a href="https://www.youtube.com/watch?v=WQeoO7MI0Bs">Basics of OpenCV</a>
+- <a href="https://rsl.ethz.ch/education-students/lectures/ros.html">ROS Tutorials by ETH Zurich</a>
+- <a href="https://drive.google.com/drive/folders/16sAReKEfsDDJ01Y0PLDpkgZngDxLBVSO?usp=sharing">ERC-IITB ER-101 session link</a>
+- <a href="https://pysource.com/2020/04/02/train-yolo-to-detect-a-custom-object-online-with-free-gpu/">Training YOLOv3 with Custom Dataset</a> 
