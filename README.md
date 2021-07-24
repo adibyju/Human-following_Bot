@@ -1,4 +1,3 @@
-<head><base target="_blank"></head>
 # Human-following Bot
 #### Team members : [Adithyan Rajesh](https://github.com/Coiffed-Columbo "Github profile of Adithyan Rajesh"), [K S Varun](https://github.com/whos-bad "Github profile of K S Varun"), [Gouri S Dev](https://github.com/GouriSDev "Github profile of Gouri S Dev"), [Aditya Byju](https://github.com/Lazyy7 "Github profile of Aditya Byju")
 ## What is the project all about?
