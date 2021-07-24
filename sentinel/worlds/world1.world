@@ -1,0 +1,265 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <!-- Create a static collision model -->
+    <!-- <model name="mymodel">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 0 -1.5707963267948966</pose>
+          <geometry>
+            <box>
+              <size>0.5 2 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.35 0.1 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient>
+            <diffuse>0 1 0 1</diffuse>
+            <specular>0 1 0 1</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+      </link>
+    </model> -->
+    <model name="mymodel">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.07 0.055 -1.5707963267948966 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>0.3</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='visual'>
+          <pose>0 -0.07 0.055 -1.5707963267948966 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.18</radius>
+              <length>0.1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient>
+            <diffuse>0 1 0 1</diffuse>
+            <specular>0 1 0 1</specular>
+            <emissive>0 0 0 0</emissive>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Create your actor -->
+    <actor name="myactor">
+
+      <!-- Actor visual model -->
+      <skin>
+        <filename>walk.dae</filename>
+      </skin>
+
+      <!-- Actor animation -->
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <!-- Actor motion -->
+      <script>
+        <loop>true</loop>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>4 6.9 0 0 0 -1.0471975512</pose>
+          </waypoint>
+          <waypoint>
+            <time>10</time>
+            <pose>8 0 0 0 0 -1.0471975512</pose>
+          </waypoint>
+          <waypoint>
+            <time>12</time>
+            <pose>8 0 0 0 0 -2.09439510239</pose>
+          </waypoint>
+          <waypoint>
+            <time>22</time>
+            <pose>4 -6.9 0 0 0 -2.09439510239</pose>
+          </waypoint>
+          <waypoint>
+            <time>24</time>
+            <pose>4 -6.9 0 0 0 -3.14159</pose>
+          </waypoint>
+          <waypoint>
+            <time>34</time>
+            <pose>-4 -6.9 0 0 0 -3.14159</pose>
+          </waypoint>
+          <waypoint>
+            <time>36</time>
+            <pose>-4 -6.9 0 0 0 -4.18879020479</pose>
+          </waypoint>
+          <waypoint>
+            <time>46</time>
+            <pose>-8 0 0 0 0 -4.18879020479</pose>
+          </waypoint>
+          <waypoint>
+            <time>48</time>
+            <pose>-8 0 0 0 0 -5.23598775598</pose>
+          </waypoint>
+          <waypoint>
+            <time>58</time>
+            <pose>-4 6.9 0 0 0 -5.23598775598</pose>
+          </waypoint>
+          <waypoint>
+            <time>60</time>
+            <pose>-4 6.9 0 0 0 -6.28318530718</pose>
+          </waypoint>
+          <waypoint>
+            <time>70</time>
+            <pose>4 6.9 0 0 0 -6.28318530718</pose>
+          </waypoint>
+          <waypoint>
+            <time>72</time>
+            <pose>4 6.9 0 0 0 -1.0471975512</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+
+        <!-- Actor Plugin -->
+        <!-- Enable collisions -->
+        <plugin name="attach_model" filename="libAttachModelPlugin.so">
+          <link>
+            <link_name>myactor_pose</link_name>
+            <model>
+              <model_name>mymodel</model_name>
+            </model>
+          </link>
+        </plugin>
+
+    </actor>
+
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>1 1 0 1</ambient>
+            <diffuse>1 1 0 1</diffuse>
+            <specular>1 1 0 1</specular>
+            <emissive>1 1 0 1</emissive>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>24 88000000</sim_time>
+      <real_time>24 264998583</real_time>
+      <wall_time>1625275470 914831684</wall_time>
+      <iterations>24088</iterations>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>

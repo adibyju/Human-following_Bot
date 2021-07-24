@@ -1,0 +1,746 @@
+<sdf version='1.6'>
+  <model name='sentinel'>
+    <link name='baselink'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0.000676 -8.5e-05 0.039781 0 -0 0</pose>
+        <mass>8.011</mass>
+        <inertia>
+          <ixx>0.0122993</ixx>
+          <ixy>2.85946e-06</ixy>
+          <ixz>-4.62626e-07</ixz>
+          <iyy>0.0474604</iyy>
+          <iyz>1.24541e-07</iyz>
+          <izz>0.058689</izz>
+        </inertia>
+      </inertial>
+      <collision name='baselink_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/baselink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='baselink_fixed_joint_lump__basemiddlelink_collision_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/basemiddlelink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='baselink_fixed_joint_lump__basetoplink_collision_2'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/basetoplink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='baselink_fixed_joint_lump__sentinelmarkinglink_collision_3'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/sentinelmarkinglink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='baselink_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/baselink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='baselink_fixed_joint_lump__basemiddlelink_visual_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/basemiddlelink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Yellow</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='baselink_fixed_joint_lump__basetoplink_visual_2'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/basetoplink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='baselink_fixed_joint_lump__sentinelmarkinglink_visual_3'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/sentinelmarkinglink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/RustySteel</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <velocity_decay/>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <link name='backleftwheellink'>
+      <pose frame=''>-0.0725 0.083539 0.0175 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0 -0.013862 -0 0 -0 0</pose>
+        <mass>0.137786</mass>
+        <inertia>
+          <ixx>6.7733e-05</ixx>
+          <ixy>1.539e-13</ixy>
+          <ixz>4.79578e-10</ixz>
+          <iyy>9.45e-05</iyy>
+          <iyz>1.65489e-12</iyz>
+          <izz>6.7733e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='backleftwheellink_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/backleftwheellink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='backleftwheellink_fixed_joint_lump__backlefttirelink_collision_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/backlefttirelink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='backleftwheellink_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/backleftwheellink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='backleftwheellink_fixed_joint_lump__backlefttirelink_visual_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/backlefttirelink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='backleftjoint' type='revolute'>
+      <child>backleftwheellink</child>
+      <parent>baselink</parent>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='backrightwheellink'>
+      <pose frame=''>-0.0725 -0.083539 0.0175 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0.01354 -0 0 -0 0</pose>
+        <mass>0.137786</mass>
+        <inertia>
+          <ixx>6.77463e-05</ixx>
+          <ixy>-1.50984e-12</ixy>
+          <ixz>0</ixz>
+          <iyy>9.45e-05</iyy>
+          <iyz>0</iyz>
+          <izz>6.77483e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='backrightwheellink_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/backrightwheellink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='backrightwheellink_fixed_joint_lump__backrightitrelink_collision_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/backrightitrelink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='backrightwheellink_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/backrightwheellink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='backrightwheellink_fixed_joint_lump__backrightitrelink_visual_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/backrightitrelink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='backrightjoint' type='revolute'>
+      <child>backrightwheellink</child>
+      <parent>baselink</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='frontleftwheellink'>
+      <pose frame=''>0.0725 0.083539 0.0175 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0 -0.01354 -0 0 -0 0</pose>
+        <mass>0.137786</mass>
+        <inertia>
+          <ixx>6.77463e-05</ixx>
+          <ixy>-1.21729e-12</ixy>
+          <ixz>4.79578e-10</ixz>
+          <iyy>9.45e-05</iyy>
+          <iyz>2.42394e-13</iyz>
+          <izz>6.77483e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='frontleftwheellink_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/frontleftwheellink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='frontleftwheellink_fixed_joint_lump__frontlefttirelink_collision_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/frontlefttirelink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='frontleftwheellink_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/frontleftwheellink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='frontleftwheellink_fixed_joint_lump__frontlefttirelink_visual_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/frontlefttirelink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='frontleftjoint' type='revolute'>
+      <child>frontleftwheellink</child>
+      <parent>baselink</parent>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='frontrightwheellink'>
+      <pose frame=''>0.0725 -0.08354 0.0175 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0.01354 -0 0 -0 0</pose>
+        <mass>0.137786</mass>
+        <inertia>
+          <ixx>6.77463e-05</ixx>
+          <ixy>-1.50984e-12</ixy>
+          <ixz>0</ixz>
+          <iyy>9.45e-05</iyy>
+          <iyz>0</iyz>
+          <izz>6.77483e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='frontrightwheellink_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/frontrightwheellink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='frontrightwheellink_fixed_joint_lump__frontrighttirelink_collision_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/frontrighttirelink.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='frontrightwheellink_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/frontrightwheellink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='frontrightwheellink_fixed_joint_lump__frontrighttirelink_visual_1'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://sentinel/meshes/frontrighttirelink.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='frontrightjoint' type='revolute'>
+      <child>frontrightwheellink</child>
+      <parent>baselink</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+
+
+
+
+
+
+    <link name="cam1link">
+      <pose>0 0 1 0 0 0</pose>
+      <inertial>
+        <mass>0.001</mass>
+        <inertia>
+          <ixx>4.166666666666667e-06</ixx>
+          <iyy>5.208333333333334e-07</iyy>
+          <izz>3.854166666666666e-06</izz>
+        </inertia>
+      </inertial>
+
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+         <box>
+            <size>0.005 0.03 0.01</size>
+          </box> 
+        </geometry>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.005 0.03 0.01</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <sensor type="depth" name="cam1_sensor">
+        <always_on>true</always_on>
+        <update_rate>30.0</update_rate>
+        <visualize>true</visualize>
+        <camera name="head">
+          <horizontal_fov>1.3962634</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <depth_camera>
+            <output>1</output>
+          </depth_camera>
+          <clip>
+            <near>0.05</near>
+            <far>300</far>
+          </clip>
+        </camera>
+
+        <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>cam1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+      </sensor>
+    </link>
+    <joint name='cam_joint' type='fixed'>
+            <child>cam1link</child>
+            <parent>baselink</parent>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                <lower>0</lower>
+                <upper>0</upper>
+                </limit>
+            </axis>
+    </joint>
+
+
+
+
+
+
+
+    <link name ='sensor_link'>
+     <pose>0 0 1 0 0 0</pose>
+     <inertial>
+      <mass>0.001</mass>
+      <inertia>
+          <ixx>4.166666666666667e-06</ixx>
+          <iyy>5.208333333333334e-07</iyy>
+          <izz>3.854166666666666e-06</izz>
+      </inertia>
+     </inertial>
+
+     <collision name='sensor_collision'>
+       <geometry>
+         <box>
+            <size>0.003 0.01 0.01</size>
+         </box>
+       </geometry>
+     </collision>
+
+     <visual name='sensor_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+         <box>
+            <size>0.005 0.03 0.01</size>
+         </box> 
+        </geometry>
+     </visual>
+
+     <sensor type="depth" name="r200_sensor">
+      <always_on>true</always_on>
+      <update_rate>30</update_rate>
+      <visualize>true</visualize>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <depth_camera>
+          <output>1</output>
+        </depth_camera>
+        <clip>
+          <near>0.02</near>
+          <far>30</far>
+        </clip>
+      </camera>
+
+      <plugin name="r200_controller" filename="libgazebo_ros_openni_kinect.so">
+        <baseline>0.2</baseline>
+        <alwaysOn>true</alwaysOn>
+        <updateRate>1.0</updateRate>
+        <cameraName>r200_ir</cameraName>
+        <imageTopicName>/r200/depth/image_raw</imageTopicName>
+        <cameraInfoTopicName>/r200/depth/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>/r200/depth/image_raw</depthImageTopicName>
+        <depthImageInfoTopicName>/r200/depth/camera_info</depthImageInfoTopicName>
+        <pointCloudTopicName>/r200/depth/points</pointCloudTopicName>
+        <frameName>r200</frameName>
+        <pointCloudCutoff>0.5</pointCloudCutoff>
+        <pointCloudCutoffMax>10</pointCloudCutoffMax>
+        <distortionK1>0.00000001</distortionK1>
+        <distortionK2>0.00000001</distortionK2>
+        <distortionK3>0.00000001</distortionK3>
+        <distortionT1>0.00000001</distortionT1>
+        <distortionT2>0.00000001</distortionT2>
+        <CxPrime>0</CxPrime>
+        <Cx>0</Cx>
+        <Cy>0</Cy>
+        <focalLength>0</focalLength>
+        <hackBaseline>0</hackBaseline>
+      </plugin>
+     </sensor>
+    </link>
+    <joint type="fixed" name="sensor_joint">
+            <child>sensor_link</child>
+            <parent>baselink</parent>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                <lower>0</lower>
+                <upper>0</upper>
+                </limit>
+            </axis>
+    </joint>
+  
+  
+  
+  
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+     <updateRate>100.0</updateRate>
+     <robotNamespace>/</robotNamespace>
+     <leftFrontJoint>frontleftjoint</leftFrontJoint>
+     <rightFrontJoint>frontrightjoint</rightFrontJoint>
+     <leftRearJoint>backleftjoint</leftRearJoint>
+     <rightRearJoint>backrightjoint</rightRearJoint>
+     <wheelSeparation>0.14</wheelSeparation>
+     <wheelDiameter>0.06</wheelDiameter>
+     <robotBaseFrame>robot_footprint</robotBaseFrame>
+     <torque>200</torque>
+     <MaxForce>100.0</MaxForce>
+     <commandTopic>cmd_vel</commandTopic>
+     <odometryTopic>odom</odometryTopic>
+     <odometryFrame>odom</odometryFrame>
+     <broadcastTF>true</broadcastTF>
+     <covariance_x>0.001</covariance_x> <!-- 0.0001 -->
+     <covariance_y>0.001</covariance_y> <!-- 0.0001 -->
+     <covariance_yaw>0.01</covariance_yaw> <!-- 0.01 -->
+  </plugin> 
+  
+
+
+
+
+  
+  </model>
+</sdf>

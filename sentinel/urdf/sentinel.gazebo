@@ -1,0 +1,110 @@
+<?xml version = "1.0"?>
+<robot name="sentinel" xmlns:xacro ="https://www.ros.org/wiki/xacro">
+
+  <gazebo reference="camera1link">
+     <material>Gazebo/Red</material>
+     <sensor type="camera" name="camera1">
+       <update_rate>30</update_rate>
+       <camera name="head">
+         <horizontal_fov>1.3962634</horizontal_fov>
+         <image>
+           <width>800</width>
+           <height>800</height>
+           <format>R8G8B8</format>
+         </image>
+         <clip>
+           <near>0.02</near>
+           <far>10</far>
+         </clip>
+       </camera>
+       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+         <alwaysOn>true</alwaysOn>
+         <updateRate>0.0</updateRate>
+         <cameraName>/camera</cameraName>
+         <imageTopicName>image_raw</imageTopicName>
+         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+         <frameName>camera1link</frameName>
+         <hackBaseline>0.07</hackBaseline>
+         <distortionK1>0.0</distortionK1>
+         <distortionK2>0.0</distortionK2>
+         <distortionK3>0.0</distortionK3>
+         <distortionT1>0.0</distortionT1>
+         <distortionT2>0.0</distortionT2>
+       </plugin>
+     </sensor> 
+  </gazebo>
+
+
+  <gazebo reference="sensor_link">
+    <sensor type="depth" name="r200_sensor">
+      <always_on>true</always_on>
+      <update_rate>30</update_rate>
+      <visualize>true</visualize>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <depth_camera>
+          <output>1</output>
+        </depth_camera>
+        <clip>
+          <near>0.02</near>
+          <far>30</far>
+        </clip>
+      </camera>
+      <plugin name="r200_controller" filename="libgazebo_ros_openni_kinect.so">
+        <baseline>0.2</baseline>
+        <alwaysOn>true</alwaysOn>
+        <updateRate>1.0</updateRate>
+        <cameraName>r200_ir</cameraName>
+        <imageTopicName>/r200/depth/image_raw</imageTopicName>
+        <cameraInfoTopicName>/r200/depth/camera_info</cameraInfoTopicName>
+        <depthImageTopicName>/r200/depth/image_raw</depthImageTopicName>
+        <depthImageInfoTopicName>/r200/depth/camera_info</depthImageInfoTopicName>
+        <pointCloudTopicName>/r200/depth/points</pointCloudTopicName>
+        <frameName>r200</frameName>
+        <pointCloudCutoff>0.5</pointCloudCutoff>
+        <pointCloudCutoffMax>10</pointCloudCutoffMax>
+        <distortionK1>0.00000001</distortionK1>
+        <distortionK2>0.00000001</distortionK2>
+        <distortionK3>0.00000001</distortionK3>
+        <distortionT1>0.00000001</distortionT1>
+        <distortionT2>0.00000001</distortionT2>
+        <CxPrime>0</CxPrime>
+        <Cx>0</Cx>
+        <Cy>0</Cy>
+        <focalLength>0</focalLength>
+        <hackBaseline>0</hackBaseline>
+      </plugin>
+   </sensor> 
+  </gazebo>
+
+  <gazebo>
+     <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+     <updateRate>100.0</updateRate>
+     <robotNamespace>/</robotNamespace>
+     <leftFrontJoint>frontleftjoint</leftFrontJoint>
+     <rightFrontJoint>frontrightjoint</rightFrontJoint>
+     <leftRearJoint>backleftjoint</leftRearJoint>
+     <rightRearJoint>backrightjoint</rightRearJoint>
+     <wheelSeparation>0.14</wheelSeparation>
+     <wheelDiameter>0.06</wheelDiameter>
+     <robotBaseFrame>robot_footprint</robotBaseFrame>
+     <torque>200</torque>
+     <MaxForce>100.0</MaxForce>
+     <commandTopic>cmd_vel</commandTopic>
+     <odometryTopic>odom</odometryTopic>
+     <odometryFrame>odom</odometryFrame>
+     <broadcastTF>true</broadcastTF>
+     <covariance_x>0.001</covariance_x> 
+     <covariance_y>0.001</covariance_y> 
+     <covariance_yaw>0.01</covariance_yaw> 
+    </plugin>  
+ </gazebo>
+</robot>
+
+
+
