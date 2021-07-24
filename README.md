@@ -1,5 +1,5 @@
 # Human-following Bot
-#### Team members : Adithyan Rajesh, K S Varun, Gouri S Dev, Aditya Byju
+#### Team members : [Adithyan Rajesh](https://github.com/Coiffed-Columbo), [K S Varun](), [Gouri S Dev](https://github.com/GouriSDev), [Aditya Byju](https://github.com/Lazyy7)
 ## What is the project all about?
 The idea of the project was to make a Human-following bot based on Computer Vision that uses the feed from its camera to find the coordinates of the human to be followed and uses this information to follow the human while maintaining a particular distance at all times. This bot can be developed into a luggage carrying robot, or be used for surveillance.
 
@@ -10,7 +10,8 @@ The idea of the project was to make a Human-following bot based on Computer Visi
 <div style="text-align:center"><img src="images%20and%20videos/gazebo%20demo.gif" width=600px/>
 </div>
 <h4>SENTINEL following human using OpenCV and YOLO</h4>
-<a href="images%20and%20videos/Human-following%20Bot%20demo.mp4">Video link</a>
+<a href="images%20and%20videos/Human-following%20Bot%20demo.mp4">Video link</a></br>
+Note: This works considering you have downloaded the weights file at the yolov3-coco directory inside of human detection directory. 
 <hr></hr>
 <div style="text-align:center"><img src="images%20and%20videos/openCV%20demo.jpg" width=600px/>
 </div>
@@ -29,7 +30,7 @@ The idea of the project was to make a Human-following bot based on Computer Visi
 - Darknet architecture and YOLO implementation
 - Basics of image processing and Machine Learning while working with OpenCV and YOLO
 - To train a custom dataset for detection
-- The ability to work in a team and manage time efficiently
+
 
 ### References
 - <a href="https://docs.google.com/document/d/1Zy8wdP_IZVClmJ4RQ8geuRMGNmiNQdbUKYD_cXuroik/edit">CUDA Installation procedure</a>
