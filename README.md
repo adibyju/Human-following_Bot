@@ -5,4 +5,9 @@ The idea of the project was to make a Human-following bot based on Computer Visi
 
 <div style="text-align:center"><img src="images%20and%20videos/sentinel%20bot.jpeg" width=600px/>
 </div>
+<h4>SENTINEL Bot</h4>
+<div style="text-align:center"><img src="images%20and%20videos/gazebo%20demo.gif" width=600px/>
+</div>
 
+<div style="text-align:center"><img src="images%20and%20videos/openCV%20demo.jpg" width=600px/>
+</div>
