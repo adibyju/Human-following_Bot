@@ -1,2 +1,2 @@
-# ITSP_Object_Tracker
-Object Recognition and Tracking Bot
+# Human-following Bot
+Human Recognition and Tracking Bot
