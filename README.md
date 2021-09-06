@@ -1,5 +1,5 @@
 # Human-following Bot
-#### Team members : [Adithyan Rajesh](https://github.com/Coiffed-Columbo "Github profile of Adithyan Rajesh"), [K S Varun](https://github.com/whos-bad "Github profile of K S Varun"), [Gouri S Dev](https://github.com/GouriSDev "Github profile of Gouri S Dev"), [Aditya Byju](https://github.com/Lazyy7 "Github profile of Aditya Byju")
+#### Team members : [Adithyan Rajesh](https://github.com/Coiffed-Columbo "Github profile of Adithyan Rajesh"), [K S Varun](https://github.com/whos-bad "Github profile of K S Varun"), [Gouri S Dev](https://github.com/GouriSDev "Github profile of Gouri S Dev"), [Aditya Byju](https://github.com/adibyju "Github profile of Aditya Byju")
 ## What is the project all about?
 The idea of the project was to make a Human-following bot based on Computer Vision that uses the feed from its camera to find the coordinates of the human to be followed and uses this information to follow the human while maintaining a particular distance at all times. This bot can be developed into a luggage carrying robot, or be used for surveillance.
 
